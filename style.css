@@ -1,0 +1,239 @@
+body {
+    margin: 0px;
+}
+
+@font-face {
+    font-family: NDAstronner;
+    src: url(./Fonts/NDAstroneer.ttf);
+}
+
+@font-face {
+    font-family: Ubuntu;
+    src: url(./Fonts/Ubuntu-M.ttf);
+}
+
+.header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    position: fixed;
+    transition: top 0.5s;
+    background-color: rgb(44, 44, 44);
+    justify-content: center;
+    color: white;
+}
+
+.logo {
+    width: 400px;
+    height: 180px;
+    background-image: url(/images/title_zerowhite_plus_mini.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    /* z-index: 11; */
+}
+
+.navigation {
+    display: none;
+}
+
+.darken_background {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    opacity: 0.5;
+    background-color: black;
+    visibility: hidden;
+    z-index: 5;
+}
+
+.menu_box {
+    height: 100vh;
+    width: 0;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    transition: 0.2s;
+    background-color: black;
+    z-index: 6;
+}
+
+.change_menu_box {
+    width: 280px;
+    /* display: flex;
+    flex-direction: column; */
+}
+
+.visible {
+    visibility: visible;
+}
+
+.menu {
+    display: none;
+    font-family: NDAstronner;
+    font-size: 50px;
+    height: fit-content;
+    top: 80px;
+    position: relative;
+    white-space: nowrap;
+}
+
+.change_menu {
+    display: flex;
+    z-index: 6;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-item {
+    width: fit-content;
+    margin-top: 100px;
+    text-decoration: underline;
+    transition: 0.9s;
+    opacity: 1;
+}
+
+.menu-item_changed {
+    opacity: 0;
+}
+
+.burger_button {
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    z-index: 7;
+    transition: 0.5s;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 50px;
+    height: 7px;
+    background-color: white;
+    margin: 0px 0px 9px 0px;
+    transition: 0.3s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-8px, 6px);
+    transform: rotate(-45deg) translate(-8px, 15px);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -15px);
+}
+
+.textBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+}
+
+.tile {
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    visibility: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    font-family: Ubuntu;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0px 10px 0px 10px;
+}
+
+.title {
+    font-family: NDAstronner;
+    font-size: 70px;
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.img {
+    width: 500px;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    visibility: inherit;
+}
+
+.button {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: NDAstronner;
+    border: 2px solid white;
+    padding-bottom: 6px;
+    font-size: 40px;
+    width: 200px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.text .button:hover {
+    color: black;
+    background-color: white;
+}
+
+.footer {
+    display: flex;
+    background-color: black;
+    width: 100%;
+    height: 100px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.footer-item {
+    font-family: NDAstronner;
+    font-size: 35px;
+    color: white;
+    text-decoration: none;
+}
+
+@media only screen and (min-width: 1200px) {
+    .header {
+        height: 50px;
+    }
+    .logo {
+        height: 90px;
+        width: 300px;
+        left: 0px;
+        position: fixed;
+    }
+}
+
+
+/* @media only screen and (min-width: 1440px) {
+    .header {
+        height: 50px;
+    }
+    .logo {
+        height: 90px;
+    }
+} */
