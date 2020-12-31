@@ -18,7 +18,7 @@ window.onscroll = function() {
         menuState = !menuState;
     } else if (prevScrollpos > currentScrollPos) {
         header.style.top = "0";
-        burgerButton.style.top = "30px";
+        burgerButton.style.top = "10px";
     } else {
         header.style.top = "-180px";
         burgerButton.style.top = "-180px";
