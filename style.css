@@ -121,9 +121,7 @@ body {
     margin-top: 20px;
 }
 
-.bar1,
-.bar2,
-.bar3 {
+.bar1, .bar2, .bar3 {
     width: 50px;
     height: 7px;
     background-color: white;
@@ -151,6 +149,13 @@ body {
     justify-content: space-evenly;
     align-items: center;
     height: 100%;
+    margin-top: 15px;
+}
+
+.texi {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
 }
 
 .tile {
@@ -163,18 +168,25 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+
+.icon {
+    height: 100px;
+    width: 100px;
+    margin-bottom: 10px;
 }
 
 .text {
     font-family: Ubuntu;
-    font-size: 30px;
+    font-size: 35px;
     color: white;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 0px 10px 0px 10px;
+    margin: 0px 10px 100px 10px;
 }
 
 .title {
@@ -183,16 +195,32 @@ body {
     text-transform: uppercase;
     color: white;
     text-align: center;
-    margin-bottom: 50px;
+    margin: 50px 0px 30px;
+    font-weight: 600;
+}
+
+.smaller_title {
+    font-family: NDAstronner;
+    font-size: 40px;
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 10px;
+    margin-left: 15px;
+}
+
+.smaller_text {
+    font-family: Ubuntu;
+    font-size: 30px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 0px 50px 100px 50px;
 }
 
 .img {
     width: 500px;
     height: 300px;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    visibility: inherit;
+    margin-bottom: 10px;
 }
 
 .button {
@@ -205,7 +233,7 @@ body {
     font-size: 40px;
     width: 200px;
     text-align: center;
-    margin-top: 10px;
+    margin: 10px 0px 10px 0px;
 }
 
 .text .button:hover {
@@ -267,9 +295,7 @@ body::-webkit-scrollbar {
         margin-top: 0;
         top: 10px;
     }
-    .bar1,
-    .bar2,
-    .bar3 {
+    .bar1, .bar2, .bar3 {
         width: 35px;
         height: 5px;
         margin: 0px 0px 6px 0px;
@@ -285,7 +311,7 @@ body::-webkit-scrollbar {
         -webkit-transform: rotate(45deg) translate(-8px, -8px);
         transform: rotate(45deg) translate(-8px, -8px);
     }
-    .textBox {
+    .tile {
         flex-direction: row;
     }
     .title {
@@ -294,11 +320,30 @@ body::-webkit-scrollbar {
     }
     .text {
         font-size: 25px;
-        margin: 0px 10px 0px 10px;
+        margin: 10px 10px 100px 10px;
+    }
+    .smaller_title {
+        font-size: 30px;
+        font-weight: 900;
+    }
+    .smaller_text {
+        font-size: 20px;
+        margin: 0px 50px 0px 50px;
+    }
+    .texi {
+        flex-direction: row;
+        height: fit-content;
+    }
+    .icon {
+        height: 70px;
+        width: 70px;
     }
     .img {
         width: 400px;
         height: 200px;
+    }
+    .button {
+        margin: 10px 0px 0px 0px;
     }
     .footer {
         height: 50px;
@@ -308,7 +353,6 @@ body::-webkit-scrollbar {
         font-size: 20px;
     }
 }
-
 
 /* @media only screen and (min-width: 1440px) {
     .header {
